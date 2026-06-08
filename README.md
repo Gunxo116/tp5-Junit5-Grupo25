@@ -23,14 +23,24 @@ Este proyecto consiste en el desarrollo e integración de una suite de pruebas u
   * `(10, -1) -> 9`
 
 ### 👤 Persona 3 — Suite + Integración y Configuración (Punto 5)
+* **Main.java** (`src/main/java/com/ulp/Main.java`): Clase ejecutable principal del proyecto. Implementa el método `main` para realizar una demostración rápida del funcionamiento de la calculadora en la consola.
 * **MiSweetSuite.java** (`src/test/java/com/ulp/MiSweetSuite.java`): Clase suite vacía encargada de agrupar y ejecutar en orden centralizado las tres clases de pruebas anteriores. Para esto utiliza las anotaciones de JUnit 5 Platform Suite: `@Suite` y `@SelectClasses`.
 * **pom.xml**: Configuración y verificación de las dependencias correctas para el motor de pruebas y suites de JUnit 5:
   * `junit-jupiter` (incluyendo `junit-jupiter-api`, `junit-jupiter-engine` y `junit-jupiter-params`)
   * `junit-platform-suite` (para el soporte de `@Suite`)
+* **nbactions.xml**: Configuración de NetBeans actualizada para ejecutar `com.ulp.Main` al presionar "Run" en el IDE.
 
 ---
 
-## Cómo Ejecutar las Pruebas
+## Cómo Ejecutar el Proyecto
+
+### Ejecutar la Aplicación Principal (Main)
+Para iniciar la ejecución de la clase principal y ver la demostración en la consola:
+```bash
+mvn compile exec:java -Dexec.mainClass="com.ulp.Main"
+```
+
+### Ejecutar las Pruebas
 
 Para compilar el proyecto y correr los casos de prueba desde una terminal con Maven configurado, puedes utilizar los siguientes comandos:
 
